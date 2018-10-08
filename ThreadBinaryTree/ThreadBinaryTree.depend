@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1538488336 source:e:\data\code\c\data structure\threadbinarytree\main.c
+	"string.h"
+	"stdio.h"
+	"stdlib.h"
+	"io.h"
+	"math.h"
+	"time.h"
+

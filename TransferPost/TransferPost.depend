@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1537709457 source:e:\data\code\c\data structure\transferpost\main.c
+	<stdio.h>
+	<malloc.h>
+	<string.h>
+

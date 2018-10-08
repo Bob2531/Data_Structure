@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1538914906 source:e:\data\code\c\data structure\adjacency_matrix\main.c
+	"stdio.h"
+	"stdlib.h"
+	"io.h"
+	"math.h"
+	"time.h"
+

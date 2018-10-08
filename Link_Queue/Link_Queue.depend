@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1536674198 source:e:\data\code\c\data structure\link_list\main.c
+1537796762 source:e:\data\code\c\data structure\link_queue\main.c
 	<stdio.h>
 	<stdlib.h>
 	<malloc.h>
