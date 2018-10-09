@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1539073839 source:e:\data\code\c\data structure\adjacency_matrix\main.c
+1539075996 source:e:\data\code\c\data structure\prim\main.c
 	"stdio.h"
 	"stdlib.h"
 	"io.h"

@@ -187,8 +187,6 @@ void BFS_Traverse(MGraph G)
     }
 }
 
-
-
 int main()
 {
 
@@ -207,6 +205,7 @@ int main()
     BFS_Traverse(G);
     printf("\n");
     //BFSTraverse(G);
+    //MiniSpanTree_Prim(G);
     printf("\n");
     //printf("Hello world!\n");
     return 0;
