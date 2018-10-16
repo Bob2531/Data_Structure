@@ -129,5 +129,4 @@ int main(void)
 	MiniSpanTree_Prim(G, 8);
 
 	return 0;
-
 }
