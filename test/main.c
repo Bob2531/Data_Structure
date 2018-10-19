@@ -314,45 +314,46 @@ typedef struct
 //}
 //
 
-
 #include<stdio.h>
-#include <stdlib.h>
 #define maxsize 50//
-
 //#define maxsize1 50//顺序栈最大容量
 #define ERROR 1//错误标记
-typedef struct{//栈的结构体定义
-    char data[maxsize];
-    int top;
-}sqstack;
+
 typedef struct binode{//二叉树的结构体定义
     char data;
     struct binode *lchild,*rchild;
 }bitnode,*bitree;
-
+typedef struct{//栈的结构体定义
+    bitree data[maxsize];
+    int top;
+}sqstack;
 void initstack(sqstack *s){//初始化栈
     s->top=-1;
 }
 
-char push(sqstack *s,char result){//进栈
-    if(s->top==maxsize){
-        return ERROR;
-    }
-    else{
+bitree push(sqstack *s,bitree result){//进栈
+//    if(s->top==maxsize){
+//        return ERROR;
+//    }
+//    else{
         s->top++;
         s->data[s->top]=result;
-    }
+        //printf("************%c***********\n",result);
+    //}
 }
 
-char pop(sqstack *s,char *result1){//出栈
-    if(s->top==-1){
-        return ERROR;
-    }
-    else{
-        *result1=s->data[s->top];
+bitree pop(sqstack *s){//出栈
+//    if(s->top==-1){
+//        return ERROR;
+//    }
+//    else{
+        bitree result1;
+        result1=s->data[s->top];
+        //printf("------------%c-----------\n",result1);
         s->top--;
-        return *result1;
-    }
+       // printf("&c",result1);
+        return result1;
+//    }
 }
 void createbitree(bitree *t){
     char ch;
@@ -372,36 +373,37 @@ void createbitree(bitree *t){
         }
     }
 }
-void preordertraverse(bitree t){
+//void visit(bitree *t){
+//    if((*t)->rchild->data!=NULL){
+//        (*t)=(*t)->rchild->data;
+//    }
+//    if((*t)->lchild->data!=NULL){
+//        (*t)=(*t)->lchild->data;
+//    }
+void preordertraverse(bitree *t){
     sqstack s;
-    bitree p=t;
-    char a,b,c;
-    if(t!=NULL){
-       initstack(&s);
-       //printf("%c",t->data);
-       push(&s,p->data);//根结点入栈
-
+    bitree *p;
+    //p(*t;
+//    bitree a;
+//    bitree b;
+    bitree c;
+    initstack(&s);
+    if(*t!=NULL){
+       //printf("********%c*******",(*t)->data);
+       push(&s,*t);//根结点入栈
        while(s.top!=-1){
-           //
-          pop(&s,&b);
-          printf("%c ",b);
-          if(t->rchild!=NULL){
-             push(&s,p->rchild->data);
-             t = t->rchild;
+         c = pop(&s);
+          printf("%c\t",c->data);
+          if(c->rchild!=NULL){
+             push(&s,c->rchild);
+
           }
-          if(t->lchild!=NULL){
-             push(&s,p->lchild->data);
-             t = t->lchild;
+          if(c->lchild!=NULL){
+             push(&s,c->lchild);
+
           }
-          show(s);
-          system("pause");
-      }
     }
-}
-void show(sqstack s)
-{
-    while(s.top!=-1)
-        printf("%c\t", s.data[s.top--]);
+    }
 }
 int main(){
     int op;
@@ -416,7 +418,7 @@ int main(){
     while(scanf("%d",&op)!=EOF){
         switch(op){
             case 1:
-                preordertraverse(t);
+                preordertraverse(&t);
                 break;
             case 2:
                 //inordertraverse(t);

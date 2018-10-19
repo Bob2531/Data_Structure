@@ -1,10 +1,9 @@
 # depslib dependency file v1.0
-1539580030 source:e:\data\code\c\data structure\test\main.c
+1539701152 source:e:\data\code\c\data structure\test\main.c
 	"stdio.h"
 	"stdlib.h"
 	"io.h"
 	"math.h"
 	"time.h"
 	<stdio.h>
-	<stdlib.h>
 
